@@ -1,7 +1,7 @@
 import React from "react";
 import { DollarSign, User, FileText, LogOut } from "lucide-react";
 
-function Navbar({ activeTab, setActiveTab, user, onLogout }) {
+function Navbar({ activeTab, setActiveTab}) {
     return (
         <nav className="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center shadow-sm sticky top-0 z-10">
             <div className="flex items-center gap-2">

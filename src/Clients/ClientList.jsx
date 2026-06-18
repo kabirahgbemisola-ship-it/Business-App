@@ -1,17 +1,17 @@
 import { Trash2 } from "lucide-react"
 
 
-export default function ClientList( setClients, setInvoices, clients){
+export default function ClientList({ setClients, setInvoices, clients }){
     const handleDelete = (ClientId) => {
         setClients((prev) => prev.filter(client => client.id !== ClientId));
         setInvoices((prev) => prev.filter(inv => inv.clientId !== ClientId));
     };
 
     return(
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm h-full">
-            <h2 className="text-lg font-bold text-slate-90 mb-4">Client Directory ({clients.length})</h2>
+        <div className="bg-white p-6 rounded-xl border border-slate-50 shadow-sm h-full">
+            <h2 className="text-lg font-bold text-slate-400 mb-4"> Client Directory ({clients.length})</h2>
             {clients.length === 0 ? (
-                <div className="text-center py-88 text-slate-500 bg-slate-50 rounded-lg border border-dashed
+                <div className="text-center py-8 text-slate-500 bg-slate-50 rounded-lg border border-dashed
                  border-slate-300">
                     No clients added yet. Add one to the left!
                 </div>
